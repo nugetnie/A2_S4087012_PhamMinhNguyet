@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background-color: #222222;
+  overflow-x: hidden;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-section {
+  width: 100%;
+  position: relative;
+}
+
+.page-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(1.12) contrast(0.98);
+}
+
+/* --- ĐỊNH VỊ TRANG MAIN --- */
+#main-section {
+  position: relative;
+}
+
+.nav-btn {
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: clamp(
+    16px,
+    1.8vw,
+    24px
+  ); /* Kích thước linh hoạt theo màn hình nhưng vẫn to rõ */
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+  letter-spacing: 2px;
+  opacity: 0.85;
+  transition: opacity 0.3s, transform 0.2s;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.nav-btn:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+/* Tọa độ 3 nút chuẩn theo tỷ lệ phần trăm */
+.btn-about {
+  top: 25%;
+  left: 25%;
+}
+
+.btn-works {
+  top: 70%;
+  left: 40%;
+}
+
+.btn-contact {
+  top: 70%;
+  right: 30%;
+}
+
+/* --- THANH SCROLLING ĐỨNG YÊN MỘT CHỖ (CỐ ĐỊNH TRÊN MÀN HÌNH) --- */
+.scroll-down-bar {
+  position: fixed; /* Cố định ở đáy màn hình, không bị trôi khi cuộn */
+  bottom: 25px; /* Khoảng cách chuẩn từ đáy màn hình lên */
+  left: 50%; /* Căn giữa màn hình */
+  transform: translateX(-50%); /* Cân đối tâm chuẩn xác */
+  width: max-content;
+  background-color: rgba(26, 26, 26, 0.85);
+  padding: 6px 18px;
+  text-align: center;
+  border-radius: 4px;
+  z-index: 9999; /* Nằm lớp trên cùng không bị che */
+}
+
+.scroll-down-bar span {
+  color: #cccccc;
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.9;
+  display: inline-block;
+  white-space: nowrap;
+  animation: pulseText 2s infinite ease-in-out;
+}
+
+@keyframes pulseText {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* --- NỀN TRẮNG CHO CÁC TRANG SAU --- */
+#about-section,
+#work-section,
+#contact-section {
+  background-color: #ffffff;
+}
+
+/* --- ĐỊNH VỊ VÙNG CLICK CHO 3 ICON MẠNG XÃ HỘI --- */
+#contact-section {
+  position: relative;
+}
+
+.social-icon {
+  position: absolute;
+  width: 3.8vw;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  max-width: 50px;
+  max-height: 50px;
+  background: transparent;
+  z-index: 999;
+  text-indent: -9999px;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+  border-radius: 50%;
+}
+
+.social-icon:hover,
+.social-icon:active {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.icon-vsco {
+  bottom: 17.2%;
+  left: 70.8%;
+}
+
+.icon-insta {
+  bottom: 17.2%;
+  left: 75.3%;
+}
+
+.icon-behance {
+  bottom: 17.2%;
+  left: 79.45%;
+}

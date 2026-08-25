@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* --- KHUNG ĐIỆN THOẠI CỐ ĐỊNH CHUẨN XÁC --- */
+.main-content {
+  width: 100%;
+  max-width: 430px;
+  min-width: 430px;
+  background-color: #222222;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* --- XỬ LÝ ẢNH CHUNG --- */
+.page-section {
+  width: 100%;
+  position: relative;
+}
+
+.page-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(1.12) contrast(0.98);
+}
+
+/* --- ĐỊNH VỊ TRANG MAIN --- */
+#main-section {
+  position: relative;
+}
+
+.nav-btn {
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  opacity: 0.85;
+  transition: opacity 0.3s, transform 0.2s;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.nav-btn:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+/* Tọa độ các nút trên ảnh main */
+.btn-about {
+  top: 25%;
+  left: 18%;
+}
+
+.btn-works {
+  top: 55%;
+  left: 22%;
+}
+
+.btn-contact {
+  top: 55%;
+  right: 22%;
+}
+
+/* --- THANH SCROLL DOWN (DÍNH CHẶT NHƯ STICKER) --- */
+.scroll-down-bar {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  background-color: rgba(26, 26, 26, 0.85);
+  padding: 5px 12px;
+  text-align: center;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.scroll-down-bar span {
+  color: #cccccc;
+  font-size: 9.5px;
+  letter-spacing: 1.5px;
+  opacity: 0.9;
+  display: inline-block;
+  white-space: nowrap;
+  animation: pulseText 2s infinite ease-in-out;
+}
+
+@keyframes pulseText {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* --- NỀN TRẮNG CHO CÁC TRANG SAU --- */
+#about-section,
+#work-section,
+#contact-section {
+  background-color: #ffffff;
+}
+
+#contact-section {
+  position: relative;
+  width: 100%;
+  height: 500px; /* <--- Cậu tự chỉnh thủ công con số này nhé! Tăng lên nếu muốn dài hơn, giảm xuống (ví dụ 400px hoặc 450px) nếu muốn thu nhỏ lại thêm */
+  overflow: hidden;
+  background-color: #ffffff; /* Hoặc màu nền khớp với trang web của cậu */
+}
+
+#contact-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Giúp thu nhỏ bức ảnh vừa khít vào khung y hệt như trang bên phải */
+  object-position: center; /* Căn giữa ảnh */
+}
+
+/* --- ĐỊNH VỊ 3 ICON MẠNG XÃ HỘI TRANG CONTACT --- */
+.social-icon {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  z-index: 999;
+  text-indent: -9999px;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+  border-radius: 50%;
+}
+
+.social-icon:hover,
+.social-icon:active {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Tọa độ 3 icon mạng xã hội theo khung cố định 430px */
+.icon-vsco {
+  bottom: 25%;
+  left: 32%;
+}
+
+.icon-insta {
+  bottom: 25%;
+  left: 48%;
+}
+
+.icon-behance {
+  bottom: 25%;
+  left: 64%;
+}

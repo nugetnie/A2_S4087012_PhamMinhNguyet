@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minh Nguyet Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NỘI DUNG CHÍNH CỦA WEBSITE -->
+    <div class="main-content">
+      <!-- Phần Main (Trang đầu tiên chứa các chữ tương tác) -->
+      <section id="main-section" class="page-section">
+        <img src="image/main.png" alt="Main Header" />
+
+        <!-- Ba nút điều hướng nằm đúng vị trí chữ trên ảnh main -->
+        <button class="nav-btn btn-about" data-target="about-section">
+          ABOUT
+        </button>
+        <button class="nav-btn btn-works" data-target="work-section">
+          WORKS
+        </button>
+        <button class="nav-btn btn-contact" data-target="contact-section">
+          CONTACT
+        </button>
+      </section>
+
+      <!-- Thanh scrolling đứng yên cố định ở đáy màn hình -->
+      <div class="scroll-down-bar">
+        <span>· scrolling down for more information · </span>
+      </div>
+
+      <!-- Phần About -->
+      <section id="about-section" class="page-section">
+        <img src="image/about.png" alt="About Section" />
+      </section>
+
+      <!-- Phần Work -->
+      <section id="work-section" class="page-section">
+        <img src="image/work.png" alt="Work Section" />
+      </section>
+
+      <!-- Phần Contact (Chứa các vùng click mạng xã hội đè lên ảnh) -->
+      <section id="contact-section" class="page-section">
+        <img src="image/contact.png" alt="Contact Section" />
+
+        <!-- VSCO -->
+        <a
+          href="https://vsco.co/nuggettdiary/gallery"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon icon-vsco"
+          >VSCO</a
+        >
+
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/routine4anewday._?igsi=MWI3eWIwb2xjb29sbA%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon icon-insta"
+          >Instagram</a
+        >
+
+        <!-- Behance -->
+        <a
+          href="https://www.behance.net/nguyetphamminh?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAT489xwZG9mAmZkaWQWUNF9gLfwAiumsrEHqpIZrTBkJBenA2V4dG4DYWVtAjExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpwEYZdX7wjG-6nAHN70kwHiOfVDsAGJeYUtllM6f_vr1I4KgJZESy0SPKnyI_aem_-yz_-FkwlYAcXEw2C8cBBw"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon icon-behance"
+          >Behance</a
+        >
+      </section>
+    </div>
+
+    <!-- Liên kết file JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
